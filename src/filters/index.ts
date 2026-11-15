@@ -5,6 +5,7 @@ export * from './derivativeFilter.ts';
 export * from './increaseContrast.ts';
 export * from './gaussianBlur.ts';
 export * from './gradientFilter.ts';
+export * from './histogramEqualize.ts';
 export * from './hypotenuse.ts';
 export * from './invert.ts';
 export * from './level.ts';

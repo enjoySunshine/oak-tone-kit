@@ -42,6 +42,7 @@ import type {
   FlipOptions,
   GaussianBlurOptions,
   GradientFilterOptions,
+  HistogramEqualizeOptions,
   HypotenuseOptions,
   IncreaseContrastOptions,
   InvertOptions,
@@ -56,6 +57,7 @@ import {
   flip,
   gaussianBlur,
   gradientFilter,
+  histogramEqualize,
   hypotenuse,
   increaseContrast,
   invert,
@@ -1072,6 +1074,15 @@ export class Image {
    */
   public increaseContrast(options: IncreaseContrastOptions = {}): Image {
     return increaseContrast(this, options);
+  }
+
+  /**
+   * Apply histogram equalization to spread the values of each channel over the whole range [0, image.maxValue].
+   * @param options - Histogram equalization options.
+   * @returns The image with equalized histograms.
+   */
+  public histogramEqualize(options: HistogramEqualizeOptions = {}): Image {
+    return histogramEqualize(this, options);
   }
 
   /**
